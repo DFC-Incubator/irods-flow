@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.irods.jargon</groupId>
+	<artifactId>irods-flow-pom</artifactId>
+	<parent>
+		<groupId>org.irods</groupId>
+		<artifactId>jargon-pom</artifactId>
+		<version>4.2.1.1-SNAPSHOT</version>
+	</parent>
+	<packaging>pom</packaging>
+	<name>irods-flow-pom</name>
+	<description>iRODS Flow Parent POM</description>
+	<properties>
+		<spring.integration.version>${spring.core.version}</spring.integration.version>
+	</properties>
+
+	<organization>
+		<name>DICE</name>
+		<url>http://www.irods.org</url>
+	</organization>
+	<developers>
+		<developer>
+			<id>mconway</id>
+			<name>Mike Conway</name>
+			<email>michael_conway@unc.edu</email>
+			<url>http://www.irods.org</url>
+			<organization>DICE</organization>
+			<organizationUrl>http://www.irods.org</organizationUrl>
+			<roles>
+				<role>developer</role>
+			</roles>
+		</developer>
+	</developers>
+	<dependencyManagement>
+		<dependencies>
+		<!-- https://mvnrepository.com/artifact/org.springframework.integration/spring-integration-core -->
+		<dependency>
+			<groupId>org.springframework.integration</groupId>
+			<artifactId>spring-integration-core</artifactId>
+			<version>${spring.integration.version}</version>
+		</dependency>
+		</dependencies>
+	</dependencyManagement>
+	<dependencies>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-all</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins />
+	</build>
+	<modules>
+		<module>irods-flow-core</module>
+	</modules>
+</project>
